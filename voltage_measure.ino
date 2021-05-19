@@ -11,7 +11,7 @@ void setup()
   myservo.attach(servopin);  
   pinMode(LDR1, INPUT);   
   pinMode(LDR2, INPUT);
-  myservo.write(initial_position);   //Move servo at 90 degree
+  myservo.write(initial_position);  
   delay(2000);
 }
 
