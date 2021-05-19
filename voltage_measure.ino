@@ -1,10 +1,10 @@
 #include <Servo.h>
 Servo myservo;             
-int initial_position = 90;   
+int initial_position = 0;   
 int LDR1 = A3;          //connect The LDR1 on Pin A0
 int LDR2 = A4;          //Connect The LDR2 on pin A1
-int error = 5;          
-int servopin=9;      
+int servopin=9; 
+int total = 0;
 void setup()
 {
   Serial.begin(115200);
@@ -31,7 +31,7 @@ void loop()
   temp = temp * 0.48828125;   // convert output (mv) to readable celcius
   Serial.print((String)"Temperature: "+temp+"F");
   int R1 = analogRead(LDR1); // read  LDR 1
-  int R2 = analogRead(LDR2); // read  LDR 2
+  int R2 = 545; // read  LDR 2
   int diff1= abs(R1 - R2);   
   int diff2= abs(R2 - R1);
   
